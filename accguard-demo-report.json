@@ -1,0 +1,61 @@
+{
+  "version": "0.9.2",
+  "generatedAt": "2026-06-03T02:17:00.413Z",
+  "summary": {
+    "observed": 4,
+    "replayCandidates": 2,
+    "resourcePatterns": 2,
+    "authMechanisms": "bearer",
+    "findings": 2
+  },
+  "findings": [
+    {
+      "severity": "high",
+      "type": "broken-access-control",
+      "confidence": "confirmed",
+      "method": "GET",
+      "path": "/accounts/acct-1",
+      "resourceIds": [
+        {
+          "type": "integer",
+          "value": "1"
+        },
+        {
+          "type": "slug",
+          "value": "acct-1"
+        }
+      ],
+      "tokenType": "bearer",
+      "originalStatus": 200,
+      "replayStatus": 200,
+      "originalSize": 192,
+      "replaySize": 192,
+      "matchType": "semantic-hash",
+      "curl": "curl -s -H \"Authorization: Bearer $TOKEN_B\" \"http://127.0.0.1:3200/accounts/acct-1\""
+    },
+    {
+      "severity": "high",
+      "type": "broken-access-control",
+      "confidence": "confirmed",
+      "method": "GET",
+      "path": "/accounts/acct-1/transactions",
+      "resourceIds": [
+        {
+          "type": "integer",
+          "value": "1"
+        },
+        {
+          "type": "slug",
+          "value": "acct-1"
+        }
+      ],
+      "tokenType": "bearer",
+      "originalStatus": 200,
+      "replayStatus": 200,
+      "originalSize": 451,
+      "replaySize": 451,
+      "matchType": "semantic-hash",
+      "curl": "curl -s -H \"Authorization: Bearer $TOKEN_B\" \"http://127.0.0.1:3200/accounts/acct-1/transactions\""
+    }
+  ]
+}
