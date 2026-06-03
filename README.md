@@ -2,7 +2,7 @@
 
 A deliberately vulnerable banking API that demonstrates **BOLA** (Broken Object Level Authorization) — [OWASP API Security #1](https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/).
 
-Used to show what [accguard](https://github.com/your-org/accguard) catches.
+Used to show what [accguard](https://github.com/rodrigo-areyzaga/accguard) catches.
 
 ---
 
