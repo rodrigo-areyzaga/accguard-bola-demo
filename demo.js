@@ -4,7 +4,7 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // accguard-bola-demo
 //
-// git clone https://github.com/your-org/accguard-bola-demo
+// git clone https://github.com/rodrigo-areyzaga/accguard-bola-demo
 // cd accguard-bola-demo
 // npm install
 // npm run demo
