@@ -173,7 +173,8 @@ async function run() {
       console.log(`      Alice got: ${f.originalStatus} (${f.originalSize} bytes)`);
       console.log(`      Bob got  : ${f.replayStatus}  (${f.replaySize} bytes)`);
       console.log(`      Match    : ${YELLOW}response bodies are identical${RESET}`);
-      console.log(`      Bob read : balance, SSN last 4, routing number, email`);
+      const bobRead = f.path.includes('transactions') ? 'full transaction history' : 'sensitive account metadata';
+      console.log(`      Bob read : ${bobRead}`);
       console.log(`\n      Reproduce:`);
       console.log(`      ${DIM}${f.curl}${RESET}\n`);
     });
@@ -181,8 +182,8 @@ async function run() {
     saveReport(findings, store, 'accguard-demo-report.json');
 
     console.log(line());
-    console.log(`\n  ${findings.length} authorization regression${findings.length !== 1 ? 's' : ''} confirmed.`);
     console.log(`  Bob accessed Alice's financial data without authorization.`);
+    console.log(`  This is the failure accguard is designed to catch: authenticated user ≠ authorized user`);
     console.log(`  Full report → ${CYAN}accguard-demo-report.json${RESET}`);
     console.log(`\n  Fix: add ownership check in ${CYAN}server.js${RESET} lines 90 and 103:`);
     console.log(`  ${DIM}if (account.owner !== user.id) return json(res, 403, { error: 'forbidden' });${RESET}\n`);
