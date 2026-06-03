@@ -1,0 +1,24 @@
+{
+  "name": "accguard-bola-demo",
+  "version": "1.0.0",
+  "description": "A deliberately vulnerable banking API to demonstrate BOLA/IDOR detection with accguard.",
+  "main": "server.js",
+  "scripts": {
+    "demo": "node demo.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "accguard": "^0.9.2"
+  },
+  "keywords": [
+    "accguard",
+    "bola",
+    "idor",
+    "owasp-a01",
+    "broken-access-control",
+    "appsec",
+    "security-testing",
+    "authorization"
+  ],
+  "license": "MIT"
+}
